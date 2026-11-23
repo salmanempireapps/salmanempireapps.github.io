@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salman Empire | Smart Android Voice Apps</title>
+  <meta name="description" content="Official developer website of Salman Empire — makers of Voice Reply: Hands-Free Chat and privacy-first Android voice utility apps." />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #262626;
+      --text: #f5f5f5;
+      --muted: #a3a3a3;
+      --accent: #10b981;
+      --accent-soft: rgba(16, 185, 129, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #ffffff; }
+    .hero {
+      padding: 64px 0 48px;
+      text-align: center;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #052e16;
+    }
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: #ffffff;
+      margin-left: 10px;
+    }
+    .btn:hover { opacity: 0.9; }
+    .section-title {
+      font-size: 1.5rem;
+      margin: 24px 0 20px;
+      color: #ffffff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .card-tag.soon {
+      background: rgba(255, 255, 255, 0.08);
+      color: #d4d4d4;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+    .features {
+      list-style: none;
+      color: #d4d4d4;
+      font-size: 0.92rem;
+    }
+    .features li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .features li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .trust-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 48px;
+    }
+    .trust-box h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+    .trust-box p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+    .disclaimer {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: #737373;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-badge">SE</span>
+        <span>Salman Empire</span>
+      </a>
+      <div class="nav-links">
+        <a href="#apps">Apps</a>
+        <a href="#privacy">Privacy</a>
+        <a href="https://sites.google.com/view/salman-empire-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="mailto:salmanempire.support@gmail.com">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="pill">Privacy-First Android Voice Utilities</span>
+      <h1>Smart Hands-Free Apps Built for Everyday Safety</h1>
+      <p>
+        Salman Empire creates lightweight, on-device Android voice assistants designed to keep you connected safely without staring at your phone screen.
+      </p>
+      <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+      <a href="mailto:salmanempire.support@gmail.com" class="btn btn-outline">Contact Support</a>
+    </section>
+
+    <section id="apps">
+      <h2 class="section-title">Our Applications</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="card-tag">Flagship App</span>
+          <h3>Voice Reply: Hands-Free Chat</h3>
+          <p>
+            Listen to incoming WhatsApp and WhatsApp Business notifications and send voice replies hands-free while driving, working, or away from your phone.
+          </p>
+          <ul class="features">
+            <li>Interactive 8-stage polite voice conversation flow</li>
+            <li>Certified support for English, Hindi &amp; Roman Hindi</li>
+            <li>VIP Priority Queue &amp; 2-minute active chat sessions</li>
+            <li>100% on-device message handling — zero developer servers</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="card-tag soon">Coming Soon on Google Play</span>
+          <h3>Smart Talking Alarm</h3>
+          <p>
+            A multilingual talking alarm assistant that speaks time, reminders, and custom greetings across 6 languages to help start your day on schedule.
+          </p>
+          <ul class="features">
+            <li>Multi-language natural voice announcements</li>
+            <li>Clean dark-mode battery-friendly interface</li>
+            <li>Simple setup with reliable background alarm support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="trust-box">
+      <h2>Our Privacy &amp; Security Commitment</h2>
+      <p>
+        <strong>Zero Message Servers:</strong> Salman Empire apps process your notifications locally on your device. We never upload, store, or sell your personal messages or contact lists on any developer server.
+      </p>
+      <p>
+        <strong>Strict App Allowlist:</strong> Voice Reply monitors only WhatsApp and WhatsApp Business notifications when explicitly enabled by you—never banking SMS, OTPs, or unrelated apps.
+      </p>
+      <p>
+        Read our full <a href="https://sites.google.com/view/salman-empire-privacy/home" target="_blank" rel="noopener" style="color: var(--accent);">Privacy Policy</a> or reach our support team at <a href="mailto:salmanempire.support@gmail.com" style="color: var(--accent);">salmanempire.support@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Salman Empire. All rights reserved. | Support: <a href="mailto:salmanempire.support@gmail.com">salmanempire.support@gmail.com</a></p>
+      <p class="disclaimer">
+        Voice Reply is an independent utility developed by Salman Empire and is not affiliated with, sponsored by, or endorsed by WhatsApp LLC or Meta Platforms, Inc.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
