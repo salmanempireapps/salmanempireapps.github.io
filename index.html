@@ -3,8 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salman Empire | Smart Android Voice Apps</title>
-  <meta name="description" content="Official developer website of Salman Empire — makers of Voice Reply: Hands-Free Chat and privacy-first Android voice utility apps." />
+  <meta name="google-site-verification" content="-XgXViZPN8AS2FfBVLi85wH-HbWXqBX13rxU9xqeJNY" />
+  <title>Salman Empire | Voice Reply: Hands-Free Chat &amp; Android Voice Apps</title>
+  <meta name="description" content="Official developer website of Salman Empire — creators of Voice Reply: Hands-Free Chat, a privacy-first on-device WhatsApp voice assistant for Android supporting English, Hindi, and Roman Hindi." />
+  <link rel="canonical" href="https://salmanempireapps.github.io/" />
+  <meta property="og:title" content="Salman Empire | Voice Reply: Hands-Free Chat" />
+  <meta property="og:description" content="100% on-device hands-free WhatsApp notification reader and voice reply assistant for Android. Zero developer servers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://salmanempireapps.github.io/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://salmanempireapps.github.io/#organization",
+        "name": "Salman Empire",
+        "url": "https://salmanempireapps.github.io/",
+        "email": "salmanempire.support@gmail.com",
+        "sameAs": [
+          "https://www.youtube.com/@salmanempireapps"
+        ]
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://salmanempireapps.github.io/#voicereply",
+        "name": "Voice Reply: Hands-Free Chat",
+        "operatingSystem": "Android 8.0 and above",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Hands-free Android voice assistant that reads incoming WhatsApp and WhatsApp Business notifications aloud and lets users dictate and confirm replies completely by voice, even with the screen off. All processing happens locally on-device with zero developer servers.",
+        "inLanguage": ["en", "hi", "hi-Latn"],
+        "featureList": [
+          "Interactive 8-stage polite voice conversation flow",
+          "Works with screen off and locked in the background",
+          "Supports English, Hindi, and Roman Hindi (Hinglish)",
+          "Strict WhatsApp and WhatsApp Business allowlist — never reads banking OTPs",
+          "72-hour free trial plus 24-hour VIP pass via rewarded ad"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@id": "https://salmanempireapps.github.io/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Voice Reply: Hands-Free Chat by Salman Empire safe to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Voice Reply processes all notifications locally on your Android device and never uploads, stores, or sells your personal chats or contacts on any developer server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Voice Reply read banking SMS, OTPs, or other apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Voice Reply uses a strict package allowlist limited solely to WhatsApp and WhatsApp Business notifications when explicitly enabled by the user."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages does Voice Reply support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voice Reply supports English, pure Hindi, and Roman Hindi (Hindi written in English letters) with natural voice prompts and hands-free dictation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Voice Reply work when the phone screen is off?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. When turned ON by the user, Voice Reply runs a visible foreground notification service that announces incoming WhatsApp messages and sends voice replies even while the phone screen is locked."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0a0a0a;
@@ -177,7 +263,7 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
     }
     .trust-box h2 {
       font-size: 1.35rem;
@@ -187,6 +273,27 @@
       color: var(--muted);
       font-size: 0.95rem;
       margin-bottom: 10px;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      color: var(--muted);
+      font-size: 0.93rem;
     }
     footer {
       border-top: 1px solid var(--border);
@@ -217,7 +324,9 @@
       <div class="nav-links">
         <a href="#apps">Apps</a>
         <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
         <a href="https://sites.google.com/view/salman-empire-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://www.youtube.com/@salmanempireapps" target="_blank" rel="noopener">YouTube</a>
         <a href="mailto:salmanempire.support@gmail.com">Support</a>
       </div>
     </div>
@@ -278,11 +387,33 @@
         Read our full <a href="https://sites.google.com/view/salman-empire-privacy/home" target="_blank" rel="noopener" style="color: var(--accent);">Privacy Policy</a> or reach our support team at <a href="mailto:salmanempire.support@gmail.com" style="color: var(--accent);">salmanempire.support@gmail.com</a>.
       </p>
     </section>
+
+    <section id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Is Voice Reply: Hands-Free Chat safe to use?</h3>
+          <p>Yes. Voice Reply processes all notifications locally on your Android device and never uploads, stores, or sells your personal chats or contacts on any developer server.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does Voice Reply read banking SMS, OTPs, or other apps?</h3>
+          <p>No. Voice Reply uses a strict package allowlist limited solely to WhatsApp and WhatsApp Business notifications when explicitly enabled by the user.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which languages does Voice Reply support?</h3>
+          <p>Voice Reply supports English, pure Hindi, and Roman Hindi (Hindi written in English letters) with natural voice prompts and hands-free dictation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does Voice Reply work when the phone screen is off?</h3>
+          <p>Yes. When turned ON by the user, Voice Reply runs a visible foreground notification service that announces incoming WhatsApp messages and sends voice replies even while the screen is locked.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Salman Empire. All rights reserved. | Support: <a href="mailto:salmanempire.support@gmail.com">salmanempire.support@gmail.com</a></p>
+      <p>&copy; 2026 Salman Empire. All rights reserved. | <a href="https://www.youtube.com/@salmanempireapps" target="_blank" rel="noopener">YouTube</a> | Support: <a href="mailto:salmanempire.support@gmail.com">salmanempire.support@gmail.com</a></p>
       <p class="disclaimer">
         Voice Reply is an independent utility developed by Salman Empire and is not affiliated with, sponsored by, or endorsed by WhatsApp LLC or Meta Platforms, Inc.
       </p>
