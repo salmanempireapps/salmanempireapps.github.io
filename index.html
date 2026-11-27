@@ -101,6 +101,7 @@
       --accent: #10b981;
       --accent-soft: rgba(16, 185, 129, 0.12);
     }
+    html { scroll-behavior: smooth; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -188,17 +189,20 @@
       font-weight: 600;
       text-decoration: none;
       font-size: 0.95rem;
-      transition: opacity 0.2s;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s, border-color 0.2s;
     }
     .btn-primary {
       background: var(--accent);
       color: #052e16;
     }
     .btn-outline {
+      background: transparent;
       border: 1px solid var(--border);
       color: #ffffff;
-      margin-left: 10px;
     }
+    .hero .btn-outline { margin-left: 10px; }
     .btn:hover { opacity: 0.9; }
     .section-title {
       font-size: 1.5rem;
@@ -295,6 +299,41 @@
       color: var(--muted);
       font-size: 0.93rem;
     }
+    .support-box {
+      background: var(--surface);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .support-box h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+    .support-box p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 16px;
+    }
+    .email-pill {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: #0a0a0a;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-family: monospace;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .support-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0 40px;
@@ -327,7 +366,7 @@
         <a href="#faq">FAQ</a>
         <a href="https://sites.google.com/view/salman-empire-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>
         <a href="https://www.youtube.com/@salmanempireapps" target="_blank" rel="noopener">YouTube</a>
-        <a href="mailto:salmanempire.support@gmail.com">Support</a>
+        <a href="#support">Support</a>
       </div>
     </div>
   </header>
@@ -340,7 +379,7 @@
         Salman Empire creates lightweight, on-device Android voice assistants designed to keep you connected safely without staring at your phone screen.
       </p>
       <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
-      <a href="mailto:salmanempire.support@gmail.com" class="btn btn-outline">Contact Support</a>
+      <a href="#support" class="btn btn-outline">Contact Support</a>
     </section>
 
     <section id="apps">
@@ -409,6 +448,17 @@
         </div>
       </div>
     </section>
+
+    <section id="support" class="support-box">
+      <h2>Need Help or Have Feedback?</h2>
+      <p>Reach Salman Empire Support directly on mobile or desktop:</p>
+      <div class="email-pill">salmanempire.support@gmail.com</div>
+      <div class="support-actions">
+        <a href="mailto:salmanempire.support@gmail.com" class="btn btn-primary">Open Email App</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanempire.support@gmail.com" target="_blank" rel="noopener" class="btn btn-outline">Open in Gmail (PC)</a>
+        <button type="button" id="copyEmailBtn" class="btn btn-outline" onclick="copySupportEmail()">Copy Email</button>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -419,5 +469,35 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    function copySupportEmail() {
+      var email = "salmanempire.support@gmail.com";
+      var btn = document.getElementById("copyEmailBtn");
+      function showCopied() {
+        btn.textContent = "Copied! \u2713";
+        setTimeout(function() {
+          btn.textContent = "Copy Email";
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+      function fallbackCopy() {
+        var el = document.createElement("textarea");
+        el.value = email;
+        el.setAttribute("readonly", "");
+        el.style.position = "absolute";
+        el.style.left = "-9999px";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+        showCopied();
+      }
+    }
+  </script>
 </body>
 </html>
